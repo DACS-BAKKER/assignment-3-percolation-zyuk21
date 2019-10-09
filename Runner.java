@@ -1,6 +1,8 @@
 /*
 Name: Alex Yuk
 File: Percolation Class Runner
+Date: 10/8/2019
+Description: Uses all three UF algorithms and prints out their average time taken and percolation probability
  */
 
 public class Runner {
@@ -10,9 +12,9 @@ public class Runner {
     QuickFind is extremely slow for N above 500
      */
     // N * N grid
-    private static final int N = 750;
+    private static final int N = 100;
     // Run percolation REPETITION times
-    private static final int REPETITIONS = 100;
+    private static final int REPETITIONS = 50;
 
     enum Alg {
         QuickFind, QuickUnion, WeightedQuickUnion, PathCompressionWQU
@@ -61,7 +63,7 @@ public class Runner {
 
     }
 
-    public static int percolate(Alg current_alg) {
+    public static int doThing(Alg current_alg) {
         Percolation perc = new Percolation(N);
 
         // Chooses current Alg

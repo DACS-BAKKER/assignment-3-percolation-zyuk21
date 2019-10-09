@@ -1,6 +1,7 @@
 /*
 Name: Alex Yuk
 File: Percolation Class
+Date: 10/8/2019
  */
 
 public class Percolation {

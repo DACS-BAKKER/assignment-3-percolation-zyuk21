@@ -1,8 +1,8 @@
 /*
 Name: Alex Yuk
 File: Percolation Class Graphics Runner
-Description:
-SAME CODE AS RUNNER CLASS EXCEPT ADDED GRAPHICAL ELEMENTS
+Date: 10/8/2019
+Description: SAME CODE AS RUNNER CLASS EXCEPT ADDED GRAPHICAL ELEMENTS
  */
 
 import edu.princeton.cs.algs4.*;

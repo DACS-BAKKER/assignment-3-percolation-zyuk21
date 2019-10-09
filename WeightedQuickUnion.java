@@ -1,6 +1,7 @@
 /*
 Name: Alex Yuk
 File: Standard WeightedQuickUnion Class
+Date: 10/8/2019
  */
 
 public class WeightedQuickUnion extends UnionFindAlg {

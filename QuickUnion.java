@@ -1,6 +1,7 @@
 /*
 Name: Alex Yuk
-File: QuickUnion Class
+File: Standard QuickUnion Class
+Date: 10/8/2019
  */
 
 public class QuickUnion extends UnionFindAlg {

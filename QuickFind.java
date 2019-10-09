@@ -1,6 +1,7 @@
 /*
 Name: Alex Yuk
-File: QuickFind Class
+File: Standard QuickFind Class
+Date: 10/8/2019
  */
 
 public class QuickFind extends UnionFindAlg {

@@ -1,3 +1,9 @@
+/*
+Name: Alex Yuk
+File: Standard WeightedQuickUnion Class with Path Compression
+Date: 10/8/2019
+ */
+
 public class PathCompressionWQU extends UnionFindAlg {
     private int[] list;
     private int[] size;
