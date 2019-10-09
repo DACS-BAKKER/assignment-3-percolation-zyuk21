@@ -33,32 +33,31 @@ public class Runner {
         System.out.println(REPETITIONS + " Repetitions\n");
 
 
-        // Uncomment the lines below and comment the for each loop to run specific UF algorithms
-        Alg current_alg = Alg.PathCompressionWQU; // Change the specific algorithm here
-        before = System.nanoTime();
-        double total = 0;
-        for (int j = 0; j < REPETITIONS; j++) {
-            total += doThing(current_alg);
-        }
-        after = System.nanoTime();
-        System.out.println(current_alg + "\nAverage Percolation Probability: " + total / REPETITIONS / (N * N));
-        System.out.println("Average Time Taken (microseconds): " + (after - before) / REPETITIONS / 1000);
-
+        // Uncomment the lines ~37 - 45 and comment the for each loop on lines ~48 - 60 to run specific UF algorithms
+//        Alg current_alg = Alg.PathCompressionWQU; // Change the specific algorithm here
+//        before = System.nanoTime();
+//        double total = 0;
+//        for (int j = 0; j < REPETITIONS; j++) {
+//            total += doThing(current_alg);
+//        }
+//        after = System.nanoTime();
+//        System.out.println(current_alg + "\nAverage Percolation Probability: " + total / REPETITIONS / (N * N));
+//        System.out.println("Average Time Taken (microseconds): " + (after - before) / REPETITIONS / 1000);
 
         // Does all three UF algorithms
-//        for (Alg current_alg : algList) {
-//            before = System.nanoTime();
-//
-//            double total = 0;
-//            for (int j = 0; j < REPETITIONS; j++) {
-//                total += doThing(current_alg);
-//            }
-//
-//            after = System.nanoTime();
-//
-//            System.out.println(current_alg + "\nAverage Percolation Probability: " + total / REPETITIONS / (N * N));
-//            System.out.println("Average Time Taken (microseconds): " + (after - before) / REPETITIONS / 1000 + "\n");
-//        }
+        for (Alg current_alg : algList) {
+            before = System.nanoTime();
+
+            double total = 0;
+            for (int j = 0; j < REPETITIONS; j++) {
+                total += doThing(current_alg);
+            }
+
+            after = System.nanoTime();
+
+            System.out.println(current_alg + "\nAverage Percolation Probability: " + total / REPETITIONS / (N * N));
+            System.out.println("Average Time Taken (microseconds): " + (after - before) / REPETITIONS / 1000 + "\n");
+        }
 
     }
 
