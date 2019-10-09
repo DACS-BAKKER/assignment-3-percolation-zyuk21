@@ -10,3 +10,6 @@ GRunner.java runs the Percolation class with graphics so it will be slower than 
 Percolation.java contains the Percolation class.
 
 QuickFind.java, QuickUnion.java and WeightedQuickUnion.java contains the three UF algorithms.
+
+UnionFindAlg.java, abstract class of QuickFind, QuickUnion, WeightedQuickUnion, and PathCompressionWQU.
+
