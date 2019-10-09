@@ -1,26 +1,34 @@
 /*
 Name: Alex Yuk
 File: Percolation Class Runner
-Date: 10/8/2019
+Date: 10/9/2019
 Description: Uses all three UF algorithms and prints out their average time taken and percolation probability
  */
+
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Runner {
 
     /*
-    Change the two final int variables bellow to test different cases of percolation
     QuickFind is extremely slow for N above 500
      */
     // N * N grid
-    private static final int N = 100;
-    // Run percolation REPETITION times
-    private static final int REPETITIONS = 50;
+    private static int N;
+    // Run percolation REPETITIONS times
+    private static int REPETITIONS;
 
     enum Alg {
         QuickFind, QuickUnion, WeightedQuickUnion, PathCompressionWQU
     }
 
     public static void main(String[] args) {
+        // Asks user to set N and Repetitions
+        StdOut.print("Enter N\n? ");
+        N = StdIn.readInt();
+        StdOut.print("Enter Repetitions \n? ");
+        REPETITIONS = StdIn.readInt();
+
         // To keep track of time
         long before, after;
 
@@ -31,10 +39,11 @@ public class Runner {
         algList[2] = Alg.WeightedQuickUnion;
         algList[3] = Alg.PathCompressionWQU;
 
-        System.out.println(N + " * " + N + " Grid");
-        System.out.println(REPETITIONS + " Repetitions\n");
+        System.out.println("\nRunning...\n" + N + " * " + N + " grid with " + REPETITIONS + " Repetitions\n");
 
-        // Uncomment the lines ~38 - 46 and comment the for each loop on lines ~49 - 61 to run specific UF algorithms
+        /*
+        Uncomment the lines ~47 - 55 and comment the for each loop on lines ~58 - 70 to run specific UF algorithms
+         */
 //        Alg current_alg = Alg.PathCompressionWQU; // Change the specific algorithm here
 //        before = System.nanoTime();
 //        double total = 0;
@@ -51,7 +60,7 @@ public class Runner {
 
             double total = 0;
             for (int j = 0; j < REPETITIONS; j++) {
-                total += doThing(current_alg);
+                total += percolate(current_alg);
             }
 
             after = System.nanoTime();
@@ -62,7 +71,7 @@ public class Runner {
 
     }
 
-    public static int doThing(Alg current_alg) {
+    public static int percolate(Alg current_alg) {
         Percolation perc = new Percolation(N);
 
         // Chooses current Alg

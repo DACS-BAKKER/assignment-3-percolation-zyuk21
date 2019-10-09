@@ -1,8 +1,9 @@
 /*
 Name: Alex Yuk
 File: Percolation Class Graphics Runner
-Date: 10/8/2019
+Date: 10/9/2019
 Description: SAME CODE AS RUNNER CLASS EXCEPT ADDED GRAPHICAL ELEMENTS
+Instruction: Just click run
  */
 
 import edu.princeton.cs.algs4.*;
@@ -13,7 +14,7 @@ public class GRunner {
     /*
     Keep N between 10 and 40 when running with graphics
      */
-    private static final int N = 20;
+    private static int N = 20;
 
     private static final int REPETITIONS = 1;
     private static final int APPLICATION_SIZE = 500;
@@ -44,6 +45,8 @@ public class GRunner {
     }
 
     public static void main(String[] args) {
+        StdOut.print("Enter N\n? ");
+        N = StdIn.readInt();
         init();
         long before, after;
 
@@ -119,7 +122,7 @@ public class GRunner {
         }
 
         draw(rRow,rCol);
-        // Pause time in miliseconds
+        // Pause time in milliseconds
         StdDraw.pause(1500);
         StdDraw.clear();
         StdDraw.setPenColor(BLOCKED_COLOR);

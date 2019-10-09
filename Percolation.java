@@ -1,7 +1,7 @@
 /*
 Name: Alex Yuk
 File: Percolation Class
-Date: 10/8/2019
+Date: 10/9/2019
  */
 
 public class Percolation {
@@ -19,18 +19,15 @@ public class Percolation {
     // Create N * N grid and N * N blocked array
     public Percolation(int N) {
         this.N = N;
+        // Sets top and bottom to their corresponding element
         this.top = N * N;
         this.bottom = N * N + 1;
 
         // Two extra elements used to track top and bottom
         connected = new int[N * N + 2];
 
-        for (int i = 0; i < N * N; i++)
+        for (int i = 0; i < N * N + 2; i++)
             connected[i] = i;
-
-
-        connected[N * N] = this.top;
-        connected[N * N + 1] = this.bottom;
 
         opened = new boolean[N * N];
     }
