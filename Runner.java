@@ -61,7 +61,7 @@ public class Runner {
 
     }
 
-    public static int doThing(Alg current_alg) {
+    public static int percolate(Alg current_alg) {
         Percolation perc = new Percolation(N);
 
         // Chooses current Alg
