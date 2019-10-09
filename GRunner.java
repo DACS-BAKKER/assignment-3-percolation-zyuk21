@@ -6,7 +6,6 @@ Description: SAME CODE AS RUNNER CLASS EXCEPT ADDED GRAPHICAL ELEMENTS
  */
 
 import edu.princeton.cs.algs4.*;
-import javax.swing.*;
 import java.awt.*;
 
 public class GRunner {
@@ -16,7 +15,6 @@ public class GRunner {
      */
     private static final int N = 20;
 
-
     private static final int REPETITIONS = 1;
     private static final int APPLICATION_SIZE = 500;
     private static final double SQR_SIZE = 0.5 / N;
@@ -24,7 +22,6 @@ public class GRunner {
     private static final Color OPEN_COLOR = new Color(255, 255, 255);
     private static final Color BLOCKED_COLOR = new Color(80, 80, 80);
     private static final Color FULL_COLOR = new Color(	74, 	134, 232);
-
 
     enum Alg {
         QuickFind, QuickUnion, WeightedQuickUnion

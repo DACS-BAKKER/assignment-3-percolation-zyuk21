@@ -5,7 +5,6 @@ Date: 10/8/2019
  */
 
 public class Percolation {
-
     // Keeps tract of connection
     public int[] connected;
     // Keeps track of what blocks are open and closed

@@ -34,8 +34,7 @@ public class Runner {
         System.out.println(N + " * " + N + " Grid");
         System.out.println(REPETITIONS + " Repetitions\n");
 
-
-        // Uncomment the lines ~37 - 45 and comment the for each loop on lines ~48 - 60 to run specific UF algorithms
+        // Uncomment the lines ~38 - 46 and comment the for each loop on lines ~49 - 61 to run specific UF algorithms
 //        Alg current_alg = Alg.PathCompressionWQU; // Change the specific algorithm here
 //        before = System.nanoTime();
 //        double total = 0;

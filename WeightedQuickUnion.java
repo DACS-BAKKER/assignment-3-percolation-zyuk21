@@ -63,6 +63,4 @@ public class WeightedQuickUnion extends UnionFindAlg {
         }
         count--;
     }
-
-
 }

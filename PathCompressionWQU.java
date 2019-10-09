@@ -67,5 +67,4 @@ public class PathCompressionWQU extends UnionFindAlg {
         }
         count--;
     }
-
 }
